@@ -277,6 +277,10 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".pay-chip").forEach((c) => c.classList.remove("selected"));
       chip.classList.add("selected");
       selectedPayment = chip.dataset.value;
+
+      const paySelectedEl = document.getElementById("paySelected");
+      paySelectedEl.textContent = `✅ Seleccionaste: ${selectedPayment}`;
+      paySelectedEl.classList.add("show");
     });
   });
 

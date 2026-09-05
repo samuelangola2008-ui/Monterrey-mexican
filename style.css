@@ -337,6 +337,11 @@ input{font-family:inherit;}
 }
 .pay-chip:hover{border-color:var(--gold);color:var(--cream);}
 .pay-chip.selected{background:var(--red);border-color:var(--red);color:#fff;}
+.pay-selected{
+  min-height:20px;margin:0 0 20px;font-size:13.5px;font-weight:600;color:var(--gold);
+  opacity:0;transform:translateY(-4px);transition:opacity .18s ease,transform .18s ease;
+}
+.pay-selected.show{opacity:1;transform:translateY(0);}
 
 /* ==========================================================================
    LIGHTBOX
