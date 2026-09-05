@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monterrey Mexican · El auténtico sabor de México</title>
+<meta name="description" content="Monterrey Mexican — comida mexicana auténtica. Pide en línea, agrega al carrito y recibe tu pedido armado por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Libre+Franklin:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="chile-noise" aria-hidden="true"></div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#inicio" class="brand">
+      <span class="brand-mark">M</span>
+      <span class="brand-name">Monterrey<em>Mexican</em></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cart-btn" id="cartToggle" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1.4"/><circle cx="18" cy="21" r="1.4"/><path d="M2 3h2.4l1.9 11.3a2 2 0 0 0 2 1.7h8.4a2 2 0 0 0 2-1.6L20.8 7H6"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="hero-kicker">Calle 89 · El Poblado — Comida mexicana de verdad</p>
+    <h1 class="hero-title">El sabor de México<br>en cada bocado</h1>
+    <p class="hero-text">Disfruta nuestros auténticos sabores mexicanos, preparados a fuego lento y con carácter, para conquistar tu paladar desde el primer taco.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn btn-primary">Ver menú</a>
+      <a id="heroWhatsapp" class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4A3.5 3.5 0 0 0 6 9.6c0 2 1.5 4 1.7 4.2s3 4.6 7.2 6.1c3.6 1.3 3.6.9 4.3.8s2.1-.8 2.4-1.6.3-1.5.2-1.6-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        Pedir por WhatsApp
+      </a>
+    </div>
+    <div class="hero-flags" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section" id="menu">
+  <div class="section-head">
+    <h2>Nuestro menú</h2>
+    <p>Ocho cartas fotografiadas directamente en el restaurante — el mismo menú que verías en la mesa, ahora con carrito y pedido directo por WhatsApp.</p>
+  </div>
+
+  <div class="menu-tabs" id="menuTabs" role="tablist">
+      <a href="#menu-entradas" class="menu-tab active" data-target="menu-entradas" role="tab">Entradas</a>
+      <a href="#menu-arepas" class="menu-tab" data-target="menu-arepas" role="tab">Arepas</a>
+      <a href="#menu-alitas" class="menu-tab" data-target="menu-alitas" role="tab">Alitas y asados</a>
+      <a href="#menu-tacos" class="menu-tab" data-target="menu-tacos" role="tab">Tacos y nachos</a>
+      <a href="#menu-picadas" class="menu-tab" data-target="menu-picadas" role="tab">Picadas</a>
+      <a href="#menu-burgers" class="menu-tab" data-target="menu-burgers" role="tab">Burgers y burritos</a>
+      <a href="#menu-salchipapa" class="menu-tab" data-target="menu-salchipapa" role="tab">Salchipapa</a>
+      <a href="#menu-bebidas" class="menu-tab" data-target="menu-bebidas" role="tab">Bebidas</a>
+  </div>
+
+  <!-- ===================== MENU-ENTRADAS ===================== -->
+  <div class="menu-panel active" id="menu-entradas">
+    <div class="panel-photo">
+      <button type="button" class="photo-zoom" aria-label="Ampliar Carta 1 — Entradas, presas y combos">
+        <!-- ETIQUETA IMG: reemplaza el src de abajo por la foto real de esta carta -->
+        <img src="img.jpg.png" alt="Carta 1 — Entradas, presas y combos" loading="lazy">
+      </button>
+      <p class="panel-photo-caption">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+        Carta 1 — Entradas, presas y combos — carta real del restaurante
+      </p>
+    </div>
+    <div class="panel-groups">
+        <div class="item-group">
+          <span class="item-group-title">Entradas</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Papa francesa</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$6.000</span>
+              <button class="add-btn" data-name="Papa francesa" data-price="6000" aria-label="Agregar Papa francesa al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Yuca frita</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$7.000</span>
+              <button class="add-btn" data-name="Yuca frita" data-price="7000" aria-label="Agregar Yuca frita al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Monedas de plátano</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$7.000</span>
+              <button class="add-btn" data-name="Monedas de plátano" data-price="7000" aria-label="Agregar Monedas de plátano al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Nachos gratinado</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$6.000</span>
+              <button class="add-btn" data-name="Nachos gratinado" data-price="6000" aria-label="Agregar Nachos gratinado al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Presas</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Ala doble caja pequeña</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$12.000</span>
+              <button class="add-btn" data-name="Ala doble caja pequeña" data-price="12000" aria-label="Agregar Ala doble caja pequeña al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Ala doble caja grande</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$15.000</span>
+              <button class="add-btn" data-name="Ala doble caja grande" data-price="15000" aria-label="Agregar Ala doble caja grande al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Combos</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Combo tangamandapio</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$20.000</span>
+              <button class="add-btn" data-name="Combo tangamandapio" data-price="20000" aria-label="Agregar Combo tangamandapio al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Combo se me chispoteo</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$20.000</span>
+              <button class="add-btn" data-name="Combo se me chispoteo" data-price="20000" aria-label="Agregar Combo se me chispoteo al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- ===================== MENU-AREPAS ===================== -->
+  <div class="menu-panel" id="menu-arepas">
+    <div class="panel-photo">
+      <button type="button" class="photo-zoom" aria-label="Ampliar Carta 2 — Arepas Monterrey, doriloco y torta de jamón">
+        <!-- ETIQUETA IMG: reemplaza el src de abajo por la foto real de esta carta -->
+        <img src="img2.jpg.png" alt="Carta 2 — Arepas Monterrey, doriloco y torta de jamón" loading="lazy">
+      </button>
+      <p class="panel-photo-caption">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+        Carta 2 — Arepas Monterrey, doriloco y torta de jamón — carta real del restaurante
+      </p>
+    </div>
+    <div class="panel-groups">
+        <div class="item-group">
+          <span class="item-group-title">Arepas Monterrey</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Sencilla</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$3.000</span>
+              <button class="add-btn" data-name="Sencilla" data-price="3000" aria-label="Agregar Sencilla al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Jamón y queso</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$5.000</span>
+              <button class="add-btn" data-name="Jamón y queso" data-price="5000" aria-label="Agregar Jamón y queso al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">De pollo</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$9.000</span>
+              <button class="add-btn" data-name="De pollo" data-price="9000" aria-label="Agregar De pollo al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Con queso</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$4.000</span>
+              <button class="add-btn" data-name="Con queso" data-price="4000" aria-label="Agregar Con queso al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">De carne</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$9.000</span>
+              <button class="add-btn" data-name="De carne" data-price="9000" aria-label="Agregar De carne al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Con todo</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$16.000</span>
+              <button class="add-btn" data-name="Con todo" data-price="16000" aria-label="Agregar Con todo al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Super especial</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$20.000</span>
+              <button class="add-btn" data-name="Super especial" data-price="20000" aria-label="Agregar Super especial al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Arepa burger</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$20.000</span>
+              <button class="add-btn" data-name="Arepa burger" data-price="20000" aria-label="Agregar Arepa burger al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Arepa con todo especial</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$25.000</span>
+              <button class="add-btn" data-name="Arepa con todo especial" data-price="25000" aria-label="Agregar Arepa con todo especial al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Dorilocos</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Doriloco personal</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$18.000</span>
+              <button class="add-btn" data-name="Doriloco personal" data-price="18000" aria-label="Agregar Doriloco personal al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Doriloco mediano</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$30.000</span>
+              <button class="add-btn" data-name="Doriloco mediano" data-price="30000" aria-label="Agregar Doriloco mediano al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Doriloco familiar</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$40.000</span>
+              <button class="add-btn" data-name="Doriloco familiar" data-price="40000" aria-label="Agregar Doriloco familiar al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Torta de jamón</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Torta sencilla</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$10.000</span>
+              <button class="add-btn" data-name="Torta sencilla" data-price="10000" aria-label="Agregar Torta sencilla al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Torta especial</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$15.000</span>
+              <button class="add-btn" data-name="Torta especial" data-price="15000" aria-label="Agregar Torta especial al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Torta mixta</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$20.000</span>
+              <button class="add-btn" data-name="Torta mixta" data-price="20000" aria-label="Agregar Torta mixta al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- ===================== MENU-ALITAS ===================== -->
+  <div class="menu-panel" id="menu-alitas">
+    <div class="panel-photo">
+      <button type="button" class="photo-zoom" aria-label="Ampliar Carta 3 — Alitas, costillas y asados">
+        <!-- ETIQUETA IMG: reemplaza el src de abajo por la foto real de esta carta -->
+        <img src="img3.jpg.png" alt="Carta 3 — Alitas, costillas y asados" loading="lazy">
+      </button>
+      <p class="panel-photo-caption">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+        Carta 3 — Alitas, costillas y asados — carta real del restaurante
+      </p>
+    </div>
+    <div class="panel-groups">
+        <div class="item-group">
+          <span class="item-group-title">Alitas Monterrey</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Alas x4 <span class="spice" title="Picante">🌶️</span></div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$13.000</span>
+              <button class="add-btn" data-name="Alas x4" data-price="13000" aria-label="Agregar Alas x4 al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Alas x8 <span class="spice" title="Picante">🌶️</span></div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$23.000</span>
+              <button class="add-btn" data-name="Alas x8" data-price="23000" aria-label="Agregar Alas x8 al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Alas x16 <span class="spice" title="Picante">🌶️</span></div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$45.000</span>
+              <button class="add-btn" data-name="Alas x16" data-price="45000" aria-label="Agregar Alas x16 al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Alas x22 <span class="spice" title="Picante">🌶️</span></div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$50.000</span>
+              <button class="add-btn" data-name="Alas x22" data-price="50000" aria-label="Agregar Alas x22 al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Costipapas</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Costipapas x30 <span class="spice" title="Picante">🌶️</span></div>
+              <div class="item-desc">A escoger: miel mostaza, BBQ o picante</div>
+            </div>
+            <div class="item-side">
+              <span class="item-price">$55.000</span>
+              <button class="add-btn" data-name="Costipapas x30" data-price="55000" aria-label="Agregar Costipapas x30 al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Costipapas x22 <span class="spice" title="Picante">🌶️</span></div>
+              <div class="item-desc">A escoger: miel mostaza, BBQ o picante</div>
+            </div>
+            <div class="item-side">
+              <span class="item-price">$65.000</span>
+              <button class="add-btn" data-name="Costipapas x22" data-price="65000" aria-label="Agregar Costipapas x22 al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Costillas</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Costillas x4</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$15.000</span>
+              <button class="add-btn" data-name="Costillas x4" data-price="15000" aria-label="Agregar Costillas x4 al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Costillas x8</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$30.000</span>
+              <button class="add-btn" data-name="Costillas x8" data-price="30000" aria-label="Agregar Costillas x8 al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Costillas x16</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$55.000</span>
+              <button class="add-btn" data-name="Costillas x16" data-price="55000" aria-label="Agregar Costillas x16 al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Costillas x22</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$65.000</span>
+              <button class="add-btn" data-name="Costillas x22" data-price="65000" aria-label="Agregar Costillas x22 al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Asados</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Filete de pollo</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$22.000</span>
+              <button class="add-btn" data-name="Filete de pollo" data-price="22000" aria-label="Agregar Filete de pollo al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Filete de pollo gratinado</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$30.000</span>
+              <button class="add-btn" data-name="Filete de pollo gratinado" data-price="30000" aria-label="Agregar Filete de pollo gratinado al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Filete de res</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$30.000</span>
+              <button class="add-btn" data-name="Filete de res" data-price="30000" aria-label="Agregar Filete de res al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Filete de cerdo</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$30.000</span>
+              <button class="add-btn" data-name="Filete de cerdo" data-price="30000" aria-label="Agregar Filete de cerdo al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Filete mixto</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$40.000</span>
+              <button class="add-btn" data-name="Filete mixto" data-price="40000" aria-label="Agregar Filete mixto al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- ===================== MENU-TACOS ===================== -->
+  <div class="menu-panel" id="menu-tacos">
+    <div class="panel-photo">
+      <button type="button" class="photo-zoom" aria-label="Ampliar Carta 4 — Nachos, tacos y quesadillas">
+        <!-- ETIQUETA IMG: reemplaza el src de abajo por la foto real de esta carta -->
+        <img src="img4.jpg.png" alt="Carta 4 — Nachos, tacos y quesadillas" loading="lazy">
+      </button>
+      <p class="panel-photo-caption">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+        Carta 4 — Nachos, tacos y quesadillas — carta real del restaurante
+      </p>
+    </div>
+    <div class="panel-groups">
+        <div class="item-group">
+          <span class="item-group-title">Nachos</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Nachos de Frida</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$22.000</span>
+              <button class="add-btn" data-name="Nachos de Frida" data-price="22000" aria-label="Agregar Nachos de Frida al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Nachos Monterrey</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$35.000</span>
+              <button class="add-btn" data-name="Nachos Monterrey" data-price="35000" aria-label="Agregar Nachos Monterrey al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Tacos</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Tacos al pastor <span class="spice" title="Picante">🌶️</span></div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$22.000</span>
+              <button class="add-btn" data-name="Tacos al pastor" data-price="22000" aria-label="Agregar Tacos al pastor al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Tacos de Chente <span class="spice" title="Picante">🌶️</span></div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$22.000</span>
+              <button class="add-btn" data-name="Tacos de Chente" data-price="22000" aria-label="Agregar Tacos de Chente al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Tacos Monterrey <span class="spice" title="Picante">🌶️</span></div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$32.000</span>
+              <button class="add-btn" data-name="Tacos Monterrey" data-price="32000" aria-label="Agregar Tacos Monterrey al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Quesadillas</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Quesadillas de Frida</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$20.000</span>
+              <button class="add-btn" data-name="Quesadillas de Frida" data-price="20000" aria-label="Agregar Quesadillas de Frida al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Quesadillas de Juárez</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$35.000</span>
+              <button class="add-btn" data-name="Quesadillas de Juárez" data-price="35000" aria-label="Agregar Quesadillas de Juárez al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- ===================== MENU-PICADAS ===================== -->
+  <div class="menu-panel" id="menu-picadas">
+    <div class="panel-photo">
+      <button type="button" class="photo-zoom" aria-label="Ampliar Carta 5 — Picadas, patacón y maicitos">
+        <!-- ETIQUETA IMG: reemplaza el src de abajo por la foto real de esta carta -->
+        <img src="img5.jpg.png" alt="Carta 5 — Picadas, patacón y maicitos" loading="lazy">
+      </button>
+      <p class="panel-photo-caption">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+        Carta 5 — Picadas, patacón y maicitos — carta real del restaurante
+      </p>
+    </div>
+    <div class="panel-groups">
+        <div class="item-group">
+          <span class="item-group-title">Picada</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Picada sigo siendo el rey</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$40.000</span>
+              <button class="add-btn" data-name="Picada sigo siendo el rey" data-price="40000" aria-label="Agregar Picada sigo siendo el rey al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Picada Monterrey</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$90.000</span>
+              <button class="add-btn" data-name="Picada Monterrey" data-price="90000" aria-label="Agregar Picada Monterrey al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Patacón</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Patacón personal</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$24.000</span>
+              <button class="add-btn" data-name="Patacón personal" data-price="24000" aria-label="Agregar Patacón personal al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Patacón para 2</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$37.000</span>
+              <button class="add-btn" data-name="Patacón para 2" data-price="37000" aria-label="Agregar Patacón para 2 al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Patacón familiar</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$48.000</span>
+              <button class="add-btn" data-name="Patacón familiar" data-price="48000" aria-label="Agregar Patacón familiar al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Maicitos</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Maicitos sencillos</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$14.000</span>
+              <button class="add-btn" data-name="Maicitos sencillos" data-price="14000" aria-label="Agregar Maicitos sencillos al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Maicitos mixtos</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$18.000</span>
+              <button class="add-btn" data-name="Maicitos mixtos" data-price="18000" aria-label="Agregar Maicitos mixtos al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Maicitos Monterrey</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$30.000</span>
+              <button class="add-btn" data-name="Maicitos Monterrey" data-price="30000" aria-label="Agregar Maicitos Monterrey al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- ===================== MENU-BURGERS ===================== -->
+  <div class="menu-panel" id="menu-burgers">
+    <div class="panel-photo">
+      <button type="button" class="photo-zoom" aria-label="Ampliar Carta 6 — Hamburguesas, burritos y flautas">
+        <!-- ETIQUETA IMG: reemplaza el src de abajo por la foto real de esta carta -->
+        <img src="img6.jpg.png" alt="Carta 6 — Hamburguesas, burritos y flautas" loading="lazy">
+      </button>
+      <p class="panel-photo-caption">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+        Carta 6 — Hamburguesas, burritos y flautas — carta real del restaurante
+      </p>
+    </div>
+    <div class="panel-groups">
+        <div class="item-group">
+          <span class="item-group-title">Hamburguesas</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Hamburguesa corral</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$12.000</span>
+              <button class="add-btn" data-name="Hamburguesa corral" data-price="12000" aria-label="Agregar Hamburguesa corral al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Hamburguesa especial del rancho</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$25.000</span>
+              <button class="add-btn" data-name="Hamburguesa especial del rancho" data-price="25000" aria-label="Agregar Hamburguesa especial del rancho al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Hamburguesa Monterrey</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$30.000</span>
+              <button class="add-btn" data-name="Hamburguesa Monterrey" data-price="30000" aria-label="Agregar Hamburguesa Monterrey al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Burritos</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Burrito que chido <span class="spice" title="Picante">🌶️</span></div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$32.000</span>
+              <button class="add-btn" data-name="Burrito que chido" data-price="32000" aria-label="Agregar Burrito que chido al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Burrito Cantinflas <span class="spice" title="Picante">🌶️</span></div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$22.000</span>
+              <button class="add-btn" data-name="Burrito Cantinflas" data-price="22000" aria-label="Agregar Burrito Cantinflas al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Burrito de los Santos <span class="spice" title="Picante">🌶️</span></div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$47.000</span>
+              <button class="add-btn" data-name="Burrito de los Santos" data-price="47000" aria-label="Agregar Burrito de los Santos al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Flautas</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Flautas corral</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$22.000</span>
+              <button class="add-btn" data-name="Flautas corral" data-price="22000" aria-label="Agregar Flautas corral al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Flauta Monterrey</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$32.000</span>
+              <button class="add-btn" data-name="Flauta Monterrey" data-price="32000" aria-label="Agregar Flauta Monterrey al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- ===================== MENU-SALCHIPAPA ===================== -->
+  <div class="menu-panel" id="menu-salchipapa">
+    <div class="panel-photo">
+      <button type="button" class="photo-zoom" aria-label="Ampliar Carta 7 — Salchipapa Mex, personales, grandes y familiares">
+        <!-- ETIQUETA IMG: reemplaza el src de abajo por la foto real de esta carta -->
+        <img src="img7.jpg.png" alt="Carta 7 — Salchipapa Mex, personales, grandes y familiares" loading="lazy">
+      </button>
+      <p class="panel-photo-caption">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+        Carta 7 — Salchipapa Mex, personales, grandes y familiares — carta real del restaurante
+      </p>
+    </div>
+    <div class="panel-groups">
+        <div class="item-group">
+          <span class="item-group-title">Personales</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Personal sencilla</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$7.000</span>
+              <button class="add-btn" data-name="Personal sencilla" data-price="7000" aria-label="Agregar Personal sencilla al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Personal gratinada</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$9.000</span>
+              <button class="add-btn" data-name="Personal gratinada" data-price="9000" aria-label="Agregar Personal gratinada al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Personal 1 proteína</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$13.000</span>
+              <button class="add-btn" data-name="Personal 1 proteína" data-price="13000" aria-label="Agregar Personal 1 proteína al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Personal 2 proteínas</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$16.000</span>
+              <button class="add-btn" data-name="Personal 2 proteínas" data-price="16000" aria-label="Agregar Personal 2 proteínas al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Personal 3 proteínas</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$18.000</span>
+              <button class="add-btn" data-name="Personal 3 proteínas" data-price="18000" aria-label="Agregar Personal 3 proteínas al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Personal 4 proteínas</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$20.000</span>
+              <button class="add-btn" data-name="Personal 4 proteínas" data-price="20000" aria-label="Agregar Personal 4 proteínas al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Personal 5 proteínas</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$25.000</span>
+              <button class="add-btn" data-name="Personal 5 proteínas" data-price="25000" aria-label="Agregar Personal 5 proteínas al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Grandes</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Grande sencilla</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$15.000</span>
+              <button class="add-btn" data-name="Grande sencilla" data-price="15000" aria-label="Agregar Grande sencilla al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Grande gratinada</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$17.000</span>
+              <button class="add-btn" data-name="Grande gratinada" data-price="17000" aria-label="Agregar Grande gratinada al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Grande 1 proteína</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$22.000</span>
+              <button class="add-btn" data-name="Grande 1 proteína" data-price="22000" aria-label="Agregar Grande 1 proteína al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Grande 2 proteínas</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$25.000</span>
+              <button class="add-btn" data-name="Grande 2 proteínas" data-price="25000" aria-label="Agregar Grande 2 proteínas al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Grande 3 proteínas</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$30.000</span>
+              <button class="add-btn" data-name="Grande 3 proteínas" data-price="30000" aria-label="Agregar Grande 3 proteínas al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Grande 4 proteínas</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$35.000</span>
+              <button class="add-btn" data-name="Grande 4 proteínas" data-price="35000" aria-label="Agregar Grande 4 proteínas al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Grande 5 proteínas</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$50.000</span>
+              <button class="add-btn" data-name="Grande 5 proteínas" data-price="50000" aria-label="Agregar Grande 5 proteínas al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Familiares</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Familiar 3 proteínas</div>
+              <div class="item-desc">Escoge 3: carne desmechada, carne molida, pollo, chorizo, chicharrón, costilla, maduro, maíz o tocineta</div>
+            </div>
+            <div class="item-side">
+              <span class="item-price">$75.000</span>
+              <button class="add-btn" data-name="Familiar 3 proteínas" data-price="75000" aria-label="Agregar Familiar 3 proteínas al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Familiar todas las proteínas</div>
+              <div class="item-desc">Carne desmechada, carne molida, pollo, chorizo, chicharrón, costilla, maduro, maíz y tocineta</div>
+            </div>
+            <div class="item-side">
+              <span class="item-price">$100.000</span>
+              <button class="add-btn" data-name="Familiar todas las proteínas" data-price="100000" aria-label="Agregar Familiar todas las proteínas al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- ===================== MENU-BEBIDAS ===================== -->
+  <div class="menu-panel" id="menu-bebidas">
+    <div class="panel-photo">
+      <button type="button" class="photo-zoom" aria-label="Ampliar Carta 8 — Micheladas, cervezas, jugos y cócteles">
+        <!-- ETIQUETA IMG: reemplaza el src de abajo por la foto real de esta carta -->
+        <img src="img8.jpg.png" alt="Carta 8 — Micheladas, cervezas, jugos y cócteles" loading="lazy">
+      <p class="panel-photo-caption">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+        Carta 8 — Micheladas, cervezas, jugos y cócteles — carta real del restaurante
+      </p>
+    </div>
+    <div class="panel-groups">
+        <div class="item-group">
+          <span class="item-group-title">Micheladas Monterrey</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Michelada tropical</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$8.000</span>
+              <button class="add-btn" data-name="Michelada tropical" data-price="8000" aria-label="Agregar Michelada tropical al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Michelada light / poker / corona</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$14.000</span>
+              <button class="add-btn" data-name="Michelada light / poker / corona" data-price="14000" aria-label="Agregar Michelada light / poker / corona al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Michelada tamarindo</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$8.000</span>
+              <button class="add-btn" data-name="Michelada tamarindo" data-price="8000" aria-label="Agregar Michelada tamarindo al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Cervezas</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Poker</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$4.000</span>
+              <button class="add-btn" data-name="Poker" data-price="4000" aria-label="Agregar Poker al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Águila</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$4.000</span>
+              <button class="add-btn" data-name="Águila" data-price="4000" aria-label="Agregar Águila al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Corona</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$7.000</span>
+              <button class="add-btn" data-name="Corona" data-price="7000" aria-label="Agregar Corona al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Club Colombia</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$5.000</span>
+              <button class="add-btn" data-name="Club Colombia" data-price="5000" aria-label="Agregar Club Colombia al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Cócteles</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Charro negro</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$20.000</span>
+              <button class="add-btn" data-name="Charro negro" data-price="20000" aria-label="Agregar Charro negro al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Sigo siendo el rey</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$20.000</span>
+              <button class="add-btn" data-name="Sigo siendo el rey" data-price="20000" aria-label="Agregar Sigo siendo el rey al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Cancún</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$20.000</span>
+              <button class="add-btn" data-name="Cancún" data-price="20000" aria-label="Agregar Cancún al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Limonadas</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Natural</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$7.000</span>
+              <button class="add-btn" data-name="Natural" data-price="7000" aria-label="Agregar Natural al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Mango biche</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$11.000</span>
+              <button class="add-btn" data-name="Mango biche" data-price="11000" aria-label="Agregar Mango biche al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Tamarindo</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$11.000</span>
+              <button class="add-btn" data-name="Tamarindo" data-price="11000" aria-label="Agregar Tamarindo al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Cerezada</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$12.000</span>
+              <button class="add-btn" data-name="Cerezada" data-price="12000" aria-label="Agregar Cerezada al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Coco</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$12.000</span>
+              <button class="add-btn" data-name="Coco" data-price="12000" aria-label="Agregar Coco al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Hierbabuena</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$12.000</span>
+              <button class="add-btn" data-name="Hierbabuena" data-price="12000" aria-label="Agregar Hierbabuena al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="item-group">
+          <span class="item-group-title">Jugos naturales (en agua $8.000 · en leche $10.000)</span>
+          <div class="item-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Lulo</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$8.000</span>
+              <button class="add-btn" data-name="Lulo" data-price="8000" aria-label="Agregar Lulo al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Mango</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$8.000</span>
+              <button class="add-btn" data-name="Mango" data-price="8000" aria-label="Agregar Mango al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Maracuyá</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$8.000</span>
+              <button class="add-btn" data-name="Maracuyá" data-price="8000" aria-label="Agregar Maracuyá al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Frutos rojos</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$8.000</span>
+              <button class="add-btn" data-name="Frutos rojos" data-price="8000" aria-label="Agregar Frutos rojos al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Fresa</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$8.000</span>
+              <button class="add-btn" data-name="Fresa" data-price="8000" aria-label="Agregar Fresa al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Mora</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$8.000</span>
+              <button class="add-btn" data-name="Mora" data-price="8000" aria-label="Agregar Mora al carrito">+</button>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-info">
+              <div class="item-name">Guanábana</div>
+              
+            </div>
+            <div class="item-side">
+              <span class="item-price">$8.000</span>
+              <button class="add-btn" data-name="Guanábana" data-price="8000" aria-label="Agregar Guanábana al carrito">+</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="about" id="nosotros">
+  <div class="about-photo" aria-hidden="true"></div>
+  <div class="about-copy">
+    <p class="about-kicker">Nuestra historia</p>
+    <h2>Sabor, tradición y pasión mexicana</h2>
+    <p>Nuestra cocina combina sabores intensos, ingredientes cuidadosamente seleccionados y el auténtico espíritu de la gastronomía mexicana para ofrecer una experiencia llena de sabor. Cada plato sale de la parrilla como si estuviera en una calle de Monterrey: directo, picante y sin atajos.</p>
+    <div class="about-stats">
+      <div><strong>+90</strong><span>platos en la carta</span></div>
+      <div><strong>8</strong><span>cartas de temporada</span></div>
+      <div><strong>100%</strong><span>pedido armado por WhatsApp</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+  <div class="contact-inner">
+    <p class="about-kicker">Contacto</p>
+    <h2>Antojo, duda o pedido grande —<br>escríbenos directo</h2>
+    <a id="contactWhatsapp" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+    <p class="contact-number">+57 310 469 7079</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Monterrey Mexican · El auténtico sabor de México</p>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+  <div class="cart-head">
+    <h3>Tu pedido</h3>
+    <button id="cartClose" aria-label="Cerrar carrito">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-subtotal">
+      <span>Total</span>
+      <strong id="cartTotal">$0</strong>
+    </div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Finalizar pedido</button>
+  </div>
+</aside>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-overlay" id="checkoutOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <button class="modal-close" id="checkoutClose" aria-label="Cerrar">&times;</button>
+    <h3 id="checkoutTitle">Un último paso</h3>
+    <p class="modal-sub">Con esto armamos tu mensaje de WhatsApp, ordenado para que el domicilio no se equivoque.</p>
+    <label class="field">
+      <span>Tu nombre</span>
+      <input type="text" id="custName" placeholder="Ej: Camila Restrepo">
+    </label>
+    <label class="field">
+      <span>Dirección de entrega</span>
+      <input type="text" id="custAddress" placeholder="Ej: Cra 34 #7-56, El Poblado">
+    </label>
+    <button class="btn btn-whatsapp btn-block" id="sendWhatsapp">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4A3.5 3.5 0 0 0 6 9.6c0 2 1.5 4 1.7 4.2s3 4.6 7.2 6.1c3.6 1.3 3.6.9 4.3.8s2.1-.8 2.4-1.6.3-1.5.2-1.6-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      Enviar pedido por WhatsApp
+    </button>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<a class="wa-float" id="floatWhatsapp" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4A3.5 3.5 0 0 0 6 9.6c0 2 1.5 4 1.7 4.2s3 4.6 7.2 6.1c3.6 1.3 3.6.9 4.3.8s2.1-.8 2.4-1.6.3-1.5.2-1.6-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
