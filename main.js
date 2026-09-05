@@ -192,7 +192,7 @@ function buildWhatsappMessage(data) {
   lines.push("");
   lines.push(`📍 Dirección: ${data.address}`);
   lines.push(`🏘️ Barrio: ${data.neighborhood}`);
-  lines.push(`🏙️ Ciudad: ${data.city}`);
+  
   if (data.ref) lines.push(`🧭 Indicaciones: ${data.ref}`);
   lines.push("");
   lines.push("🛒 PEDIDO:");

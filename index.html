@@ -1077,6 +1077,7 @@
       <button type="button" class="photo-zoom" aria-label="Ampliar Carta 8 — Micheladas, cervezas, jugos y cócteles">
         <!-- ETIQUETA IMG: reemplaza el src de abajo por la foto real de esta carta -->
         <img src="img8.jpg.png" alt="Carta 8 — Micheladas, cervezas, jugos y cócteles" loading="lazy">
+      </button>
       <p class="panel-photo-caption">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
         Carta 8 — Micheladas, cervezas, jugos y cócteles — carta real del restaurante
@@ -1380,6 +1381,14 @@
   </div>
   <div class="cart-items" id="cartItems"></div>
   <div class="cart-footer">
+    <div class="cart-line">
+      <span>Subtotal</span>
+      <span id="cartSubtotal">$0</span>
+    </div>
+    <div class="cart-line">
+      <span>Domicilio</span>
+      <span id="cartDelivery">$0</span>
+    </div>
     <div class="cart-subtotal">
       <span>Total</span>
       <strong id="cartTotal">$0</strong>
@@ -1390,24 +1399,57 @@
 
 <!-- CHECKOUT MODAL -->
 <div class="modal-overlay" id="checkoutOverlay">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+  <div class="modal modal-lg" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
     <button class="modal-close" id="checkoutClose" aria-label="Cerrar">&times;</button>
     <h3 id="checkoutTitle">Un último paso</h3>
     <p class="modal-sub">Con esto armamos tu mensaje de WhatsApp, ordenado para que el domicilio no se equivoque.</p>
+
+    <p class="modal-section-title">👤 Datos del cliente</p>
     <label class="field">
-      <span>Tu nombre</span>
-      <input type="text" id="custName" placeholder="Ej: Camila Restrepo">
+      <span>Nombre completo</span>
+      <input type="text" id="custName" placeholder="Ej: Samuel Restrepo">
+    </label>
+    <label class="field">
+      <span>Número de teléfono</span>
+      <input type="tel" id="custPhone" placeholder="Ej: 3101234567">
     </label>
     <label class="field">
       <span>Dirección de entrega</span>
-      <input type="text" id="custAddress" placeholder="Ej: Cra 34 #7-56, El Poblado">
+      <input type="text" id="custAddress" placeholder="Ej: Calle 10 #20-30">
     </label>
+    <div class="field-row">
+      <label class="field">
+        <span>Barrio</span>
+        <input type="text" id="custNeighborhood" placeholder="Ej: Centro">
+      </label>
+     
+    </div>
+    <label class="field">
+      <span>Indicaciones para encontrar la dirección</span>
+      <input type="text" id="custRef" placeholder="Ej: Edificio azul, apto 302, portería">
+    </label>
+
+    <p class="modal-section-title">💳 Método de pago</p>
+    <div class="pay-methods" id="payMethods" role="radiogroup" aria-label="Método de pago">
+      <button type="button" class="pay-chip" data-value="💵 Efectivo">💵 Efectivo</button>
+      <button type="button" class="pay-chip" data-value="💳 Tarjeta">💳 Tarjeta</button>
+      <button type="button" class="pay-chip" data-value="📱 Nequi">📱 Nequi</button>
+      <button type="button" class="pay-chip" data-value="📱 Daviplata">📱 Daviplata</button>
+      <button type="button" class="pay-chip" data-value="🏦 Transferencia">🏦 Transferencia</button>
+    </div>
+
+    <label class="field">
+      <span>Nota para la cocina o el domiciliario (opcional)</span>
+      <textarea id="custNote" rows="2" placeholder="Ej: Sin cebolla, por favor."></textarea>
+    </label>
+
     <button class="btn btn-whatsapp btn-block" id="sendWhatsapp">
       <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4A3.5 3.5 0 0 0 6 9.6c0 2 1.5 4 1.7 4.2s3 4.6 7.2 6.1c3.6 1.3 3.6.9 4.3.8s2.1-.8 2.4-1.6.3-1.5.2-1.6-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
       Enviar pedido por WhatsApp
     </button>
   </div>
 </div>
+
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
