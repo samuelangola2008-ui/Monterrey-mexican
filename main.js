@@ -5,6 +5,9 @@
    Para cambiar nombres, precios o fotos: edita el HTML, no este archivo.
    ========================================================================== */
 const WHATSAPP_NUMBER = "573104697079"; // +57 310 469 7079
+const DELIVERY_FEE = 5000; // 🚚 valor fijo de domicilio — ajústalo aquí si cambia
+
+let selectedPayment = null;
 
 /* ==========================================================================
    ESTADO DEL CARRITO
@@ -87,12 +90,17 @@ function removeLine(key) {
   renderCart();
 }
 
-function cartTotal() {
+function cartSubtotal() {
   return cart.reduce((sum, c) => sum + c.price * c.qty, 0);
+}
+function cartTotal() {
+  return cart.length ? cartSubtotal() + DELIVERY_FEE : 0;
 }
 
 function renderCart() {
   const itemsEl = document.getElementById("cartItems");
+  const subtotalEl = document.getElementById("cartSubtotal");
+  const deliveryEl = document.getElementById("cartDelivery");
   const totalEl = document.getElementById("cartTotal");
   const countEl = document.getElementById("cartCount");
 
@@ -125,6 +133,8 @@ function renderCart() {
     });
   }
 
+  subtotalEl.textContent = fmt(cartSubtotal());
+  deliveryEl.textContent = cart.length ? fmt(DELIVERY_FEE) : fmt(0);
   totalEl.textContent = fmt(cartTotal());
 }
 
@@ -173,31 +183,60 @@ function showToast(msg) {
 /* ==========================================================================
    WHATSAPP
    ========================================================================== */
-function buildWhatsappMessage(name, address) {
+function buildWhatsappMessage(data) {
   const lines = [];
-  lines.push("🌮 *Pedido Monterrey Mexican* 🌮");
+  lines.push("🌮 NUEVO PEDIDO");
   lines.push("");
-  lines.push("Hola, quiero realizar el siguiente pedido:");
+  lines.push(`👤 Cliente: ${data.name}`);
+  lines.push(`📞 Teléfono: ${data.phone}`);
   lines.push("");
+  lines.push(`📍 Dirección: ${data.address}`);
+  lines.push(`🏘️ Barrio: ${data.neighborhood}`);
+  lines.push(`🏙️ Ciudad: ${data.city}`);
+  if (data.ref) lines.push(`🧭 Indicaciones: ${data.ref}`);
+  lines.push("");
+  lines.push("🛒 PEDIDO:");
   cart.forEach((line) => {
-    lines.push(`• ${line.name}  x${line.qty}  —  ${fmt(line.price * line.qty)}`);
+    lines.push(`🌮 ${line.name} x${line.qty} — ${fmt(line.price * line.qty)}`);
   });
   lines.push("");
-  lines.push(`💰 *Total: ${fmt(cartTotal())}*`);
+  lines.push(`💰 Subtotal: ${fmt(cartSubtotal())}`);
+  lines.push(`🚚 Domicilio: ${fmt(DELIVERY_FEE)}`);
+  lines.push(`💵 TOTAL: ${fmt(cartTotal())}`);
   lines.push("");
-  lines.push(`🙋 Nombre: ${name}`);
-  lines.push(`📍 Dirección: ${address}`);
+  lines.push(`💳 Método de pago: ${data.payment}`);
+  if (data.note) {
+    lines.push("");
+    lines.push("📝 Nota:");
+    lines.push(data.note);
+  }
+  lines.push("");
+  lines.push("¡Gracias!");
   return lines.join("\n");
 }
 
 function sendOrderToWhatsapp() {
-  const name = document.getElementById("custName").value.trim();
-  const address = document.getElementById("custAddress").value.trim();
-  if (!name || !address) {
-    showToast("Escribe tu nombre y dirección");
+  const data = {
+    name: document.getElementById("custName").value.trim(),
+    phone: document.getElementById("custPhone").value.trim(),
+    address: document.getElementById("custAddress").value.trim(),
+    neighborhood: document.getElementById("custNeighborhood").value.trim(),
+    city: document.getElementById("custCity").value.trim(),
+    ref: document.getElementById("custRef").value.trim(),
+    note: document.getElementById("custNote").value.trim(),
+    payment: selectedPayment,
+  };
+
+  if (!data.name || !data.phone || !data.address || !data.neighborhood || !data.city) {
+    showToast("Completa nombre, teléfono, dirección, barrio y ciudad");
     return;
   }
-  const msg = buildWhatsappMessage(name, address);
+  if (!data.payment) {
+    showToast("Elige un método de pago");
+    return;
+  }
+
+  const msg = buildWhatsappMessage(data);
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
   window.open(url, "_blank");
   closeCheckout();
@@ -232,6 +271,14 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("checkoutBtn").addEventListener("click", openCheckout);
   document.getElementById("checkoutClose").addEventListener("click", closeCheckout);
   document.getElementById("sendWhatsapp").addEventListener("click", sendOrderToWhatsapp);
+
+  document.querySelectorAll(".pay-chip").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      document.querySelectorAll(".pay-chip").forEach((c) => c.classList.remove("selected"));
+      chip.classList.add("selected");
+      selectedPayment = chip.dataset.value;
+    });
+  });
 
   document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
   document.getElementById("lightbox").addEventListener("click", (e) => {
